@@ -1,13 +1,15 @@
-#Danielly
-def search_planet(planets):
-    termo = input("Digite o nome do planeta para buscar: ").strip().lower()
-    encontrados = [p for p in planets if termo in p['nome'].lower()]
+#Danyelle
+import json
+import os
+def search_eventos(evento):
+    termo = input("Digite o nome do evento para buscar: ").strip().lower()
+    encontrados = [p for p in evento if termo in p['nome'].lower()]
 
     if not encontrados:
-        print("🔎 Nenhum planeta encontrado com esse nome.\n")
+        print("🔎 Nenhum evento encontrado com esse nome.\n")
         return
 
     print("\n--- Resultados da Pesquisa ---")
-    for planet in encontrados:
-        print(f"ID: {planet['id']} | Nome: {planet['nome']} | Tamanho: {planet['tamanho']} km | Habitável: {planet['habitavel']}")
+    for evento in encontrados:
+        print(f"ID: {evento['id']} | Nome: {evento['nome']} | Tamanho: {evento['tamanho']} km | Habitável: {planet['habitavel']}")
     print()
