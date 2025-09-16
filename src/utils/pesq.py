@@ -6,10 +6,10 @@ def search_eventos(evento):
     encontrados = [p for p in evento if termo in p['nome'].lower()]
 
     if not encontrados:
-        print("🔎 Nenhum evento encontrado com esse nome.\n")
+        print("Nenhum evento encontrado com esse nome.\n")
         return
 
     print("\n--- Resultados da Pesquisa ---")
     for evento in encontrados:
-        print(f"ID: {evento['id']} | Nome: {evento['nome']} | Tamanho: {evento['tamanho']} km | Habitável: {planet['habitavel']}")
+        print(f"ID: {evento['id']} | Nome: {evento['nome']} | Data: {evento['data']} | Local: {evento['local']} | Descrição: {evento['descrição']} | Tipo: {evento['tipo']} ")
     print()
