@@ -1,11 +1,12 @@
 class Evento:
-    def __init__(self, id, nome, data, local, descricao, tipo):
-        self.id = id
+    def __init__(self, nome, data, local, descricao, tipo):
+        self.id = id((self.nome, self.data, self.local, self.descricao, self.tipo)) # O id pode ser uma tupla do proprio objeto
         self.nome = nome
         self.data = data
         self.local = local
         self.descricao = descricao
         self.tipo = tipo
+        self.status = True # True para ativo | False para inativo
 
     def __repr__(self):
         return f"Evento({self.id}, {self.nome}, {self.data}, {self.local}, {self.tipo})"
