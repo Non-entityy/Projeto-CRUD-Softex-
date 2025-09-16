@@ -1,38 +1,33 @@
-#from utils.additens import 
+from utils.additens import adicionar_item
+from utils.load_save import carregar_eventos, salvar_eventos
 from utils.edit import editar_item
 from utils.pesq import search_planet
 from utils.remitens import remover_planeta_nome
-#from utils.list import listar_planeta
+from utils.menu import menu
+from utils.list import list_planets
 #from eventos import adicionar_evento, listar_eventos, editar_evento, remover_evento, pesquisar_evento
 
-def menu():
-    itens = []
+def main():
+    events = carregar_eventos()
     while True:
-        print("\n=== MENU DE EVENTOS ===")
-        print("1 - Adicionar Evento")
-        print("2 - Pesquisar Evento")
-        print("3 - Editar Evento")
-        print("4 - Remover Evento")
-        print("5 - Listar todos os Eventos")
-        print("0 - Sair")
+        opcao = menu()
 
-        opcao = input("Escolha uma opção: ")
-
-        if opcao == "1":
-            adicionar_item(itens)
-        elif opcao == "2":
-            search_planet(itens)
-        elif opcao == "3":
-            editar_item(itens)
-        elif opcao == "4":
-            remover_planeta_nome(itens)
-        elif opcao == "5":
-            listar_planeta(itens)
-        elif opcao == "0":
-            print("Saindo... Até logo!")
-            break
-        else:
-            print("Opção inválida, tente novamente.")
+        match opcao:
+            case "1":
+                adicionar_item(events)
+            case "2":
+                search_planet(events)
+            case "3":
+                editar_item(events)
+            case "4":
+                remover_planeta_nome(events)
+            case "5":
+                list_planets(events)
+            case "0":
+                print("Saindo... Até logo!")
+                break
+            case _:
+                print("Opção inválida, tente novamente.")
 
 if __name__ == '__main__':
-    menu()
+    main()
