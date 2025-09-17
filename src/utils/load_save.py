@@ -1,5 +1,5 @@
 import json
-from models.event import Evento
+# from models.event import Evento
 #from models.event import Evento
 #from utils.load_save import carregar_eventos, salvar_eventos
 
