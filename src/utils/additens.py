@@ -1,17 +1,22 @@
 #Lorena
-# planetas = [] 
-def adicionar_eventos():
-    nome = input("digite o nome do planeta:" )
-    tamanho = float(input("digite o tamanho do planeta (em km):"))
-    distancia = float(input("digite a distancia do sol (em milhões de km):"))
+# atributos = [] nome, data, local, descricao, tipo
+def create_eventos():
+   evento = float(input("nome do evento:"))
+    data = float(input("data do evento:"))
+    local = float(input("local do evento:"))
+    descricao = float(input("Descrição do evento"))
+    tipo = float(input("tipo de evento:"))
 
-    planeta = {
-        "nome": nome,
-        "tamanho": tamanho,
-        "distancia": distancia 
+    evento = {
+        "evento": evento,
+        "data": data,
+        "local": local,
+        "descricao": descricao,
+        "tipo": tipo,
         }  
-    eventos.append(planeta)
+    eventos.append(evento)
     print(f"\n evento '{ }) registrado com sucesso!")
-    print(adicionar_eventos)
+    print(create_eventos)
 
-adicionar_eventos()
+create_eventos()
+
