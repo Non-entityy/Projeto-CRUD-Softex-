@@ -1,24 +1,29 @@
 import json
-# from models.event import Evento
-#from models.event import Evento
-#from utils.load_save import carregar_eventos, salvar_eventos
 
 PATH = "src/data/events.json" # Executar no diretorio principal
 
-# Função para carregar eventos do arquivo JSON
 def carregar_eventos():
+    """Carrega a lista de eventos do arquivo JSON principal
+
+    Returns:
+        list: Se encontrar o arquivo retornara a lista com os eventos, se não retornara uma lista vazia
+    """
     try:
-        with open(PATH, 'r') as f:
-            dados = list(json.load(f))
+        with open(PATH, 'r', encoding="utf-8") as f:
+            dados = json.load(f)
             return dados
-            # return [Evento(**evento) for evento in dados]  # Converte dicionários em objetos Evento
+            # return [Evento(**evento) for evento in eventos_json if not evento["id"]]  # Converte dicionários em objetos Evento
     except FileNotFoundError:
         return []
     except TypeError:
         return []
 
-# Função para salvar os eventos no arquivo JSON
 def salvar_eventos(eventos):
-    eventos_dict = [evento.to_dict() for evento in eventos]  # Converte objetos Evento em dicionários
-    with open(PATH, 'w') as f:
+    """Salva a lista completa com eventos no arquivo JSON
+
+    Args:
+        eventos (list): Lista com todos os eventos que vão ser salvos no JSON (Incluindo os já existentes)
+    """
+    eventos_dict = [evento for evento in eventos]  # Converte objetos Evento em dicionários
+    with open(PATH, 'w', encoding="utf-8") as f:
         json.dump(eventos_dict, f, indent=4)
