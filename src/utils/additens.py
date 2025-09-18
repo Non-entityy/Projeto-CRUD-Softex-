@@ -1,16 +1,17 @@
-#Lorena
-# atributos = [] nome, data, local, descricao, tipo
-from models.event import Evento
-def create_eventos(self,eventos):
-   self.nome = float(input("nome do evento:"))
-   self.data = float(input("data do evento:"))
-   self.local = float(input("local do evento:"))
-   self.descricao = float(input("Descrição do evento"))
-   self.tipo = float(input("tipo de evento:"))
+from utils.load_save import carregar_eventos, salvar_eventos
+# #Lorena
+# # atributos = [] nome, data, local, descricao, tipo
+def adicionar_evento(Class_obj, eventos):
+    print("\nAdicionando um novo evento:")
+    nome = input("Nome do Evento: ")
+    data = input("Data do Evento (DD-MM-AAAA): ")
+    local = input("Local do Evento: ")
+    descricao = input("Descrição do Evento: ")
+    tipo = input("Tipo do Evento: ")
 
-   eventos.append(eventos)
-print(f"\n evento {nome} registrado com sucesso!")
-print(create_eventos)
-
-create_eventos()
-
+    novo_evento = Class_obj(nome, data, local, descricao, tipo)
+    evento_dict = novo_evento.to_dict()
+    eventos.append(evento_dict)
+    salvar_eventos(eventos)
+    print("Evento adicionado com sucesso!")
+    return novo_evento
