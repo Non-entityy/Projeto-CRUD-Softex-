@@ -26,4 +26,4 @@ def salvar_eventos(eventos):
     """
     eventos_dict = [evento for evento in eventos]  # Converte objetos Evento em dicionários
     with open(PATH, 'w', encoding="utf-8") as f:
-        json.dump(eventos_dict, f, indent=4)
+        json.dump(eventos_dict, f, indent=4, ensure_ascii=False)
