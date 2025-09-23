@@ -2,7 +2,7 @@ from models.event import Evento
 from utils.additens import adicionar_evento
 from utils.load_save import carregar_eventos
 from utils.edit import editar_item
-from utils.pesq import search_planet
+from utils.pesq import search_eventos
 from utils.remitens import remover_planeta_nome
 from utils.menu import menu
 from utils.list import list_events
@@ -17,12 +17,12 @@ def main():
             case "1":
                 adicionar_evento(Evento, events)
             case "2":
-                search_planet(events)
+                search_eventos(events)
             case "3":
                 editar_item(events)
             case "4":
                 list_events(False)
-                remover_planeta_nome(events, search_planet(events))
+                remover_planeta_nome(events, search_eventos(events))
             case "5":
                 list_events(events)
             case "0":
