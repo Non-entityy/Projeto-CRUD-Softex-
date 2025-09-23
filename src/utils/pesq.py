@@ -1,4 +1,9 @@
-#Danielly
+#Danyelle
+input 
+
+
+
+
 def search_eventos (Evento):
     termo = input("Digite o nome do evento para buscar: ").strip().lower()
     encontrados = [p for p in Evento if termo in p['nome'].lower()]
