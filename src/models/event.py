@@ -9,14 +9,15 @@ class Evento:
         self.status = True # True para ativo | False para inativo
 
     def __repr__(self):
-        return f"Evento({self.id}, {self.nome}, {self.data}, {self.local}, {self.tipo})"
+        return f"Evento({self.id}, {self.tipo}, {self.nome}, {self.data}, {self.local})"
 
     def to_dict(self):
         return {
             "id": self.id,
+            "tipo": self.tipo,
             "nome": self.nome,
             "data": self.data,
             "local": self.local,
             "descricao": self.descricao,
-            "tipo": self.tipo
+            
         }

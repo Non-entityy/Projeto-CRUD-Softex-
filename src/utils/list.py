@@ -14,3 +14,4 @@ def list_events(exibir_id: bool= True):
             if exibir_id: print(f"{dados}: {informacao}")
 
             if not exibir_id: print(f"    {dados}: {informacao}")
+        print()
