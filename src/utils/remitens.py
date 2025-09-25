@@ -32,22 +32,22 @@ from utils.load_save import salvar_eventos
 #      "temperatura": ~-63},
 # ]
 
-def reordenar_id(lista_planeta):
-     for id, planeta in enumerate(lista_planeta, start=1):
-          planeta["id"] = id   
-     return lista_planeta   
+def reordenar_id(lista_evento): # Função que não vai ser utilizada pelo conceito de Design Patterns
+     for id, evento in enumerate(lista_evento, start=1):
+          evento["id"] = id
+     return lista_evento
 
-def remover_planeta_nome(lista_planeta, planeta_remover):
-     for planeta in lista_planeta:
-          if planeta_remover["nome"] == planeta["nome"]:
-               lista_planeta.remove(planeta)
-               print(f"O planeta {planeta_remover} foi removido com  sucesso.") 
-               # reordenar_id(lista_planeta) 
-               print(f"{lista_planeta}")
-               salvar_eventos(lista_planeta)
-               return lista_planeta
+def remover_evento_nome(lista_evento, evento_remover):
+     for evento in lista_evento:
+          if evento_remover["nome"] == evento["nome"]:
+               lista_evento.remove(evento)
+               print(f"O evento {evento_remover} foi removido com  sucesso.") 
+               # reordenar_id(lista_evento) 
+               print(f"{lista_evento}")
+               salvar_eventos(lista_evento)
+               return lista_evento
      else:
-          print(f"O Planeta digitado {planeta_remover} não foi encontrado. Verifique se digitou corretamente.")    
+          print(f"O Planeta digitado {evento_remover} não foi encontrado. Verifique se digitou corretamente.")    
       
 
 # Testes
