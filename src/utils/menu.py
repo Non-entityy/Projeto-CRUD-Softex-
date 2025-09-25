@@ -8,4 +8,5 @@ def menu():
     print("0 - Sair")
 
     opcao = input("Escolha uma opção: ")
+    print('')
     return opcao
