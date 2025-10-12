@@ -43,9 +43,21 @@ class Pessoa:
             self, cpf: CPF, nome: str, 
             idade: int, genero: Genero, 
             ingressos_ativos=[], ingressos_vencidos=[]):
+        self.id = id(cpf, nome, idade, genero, ingressos_ativos, ingressos_vencidos)
         self.cpf = CPF(cpf)
         self.nome = nome
         self.idade = idade
         self.genero = genero
         self.ingressos_ativos = ingressos_ativos
         self.ingressos_vencidos = ingressos_vencidos
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "cpf": self.cpf,
+            "nome": self.nome,
+            "idade": self.idade,
+            "genero": self.genero,
+            "ingressos ativos": self.ingressos_ativos,
+            "ingressos inativos": self.ingressos_vencidos   
+        }

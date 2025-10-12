@@ -19,9 +19,12 @@ class Evento:
     def to_dict(self):
         return {
             "id": self.id,
-            "tipo": self.tipo,
             "nome": self.nome,
             "data": self.data,
             "local": self.local,
-            "descricao": self.descricao,   
+            "descricao": self.descricao,
+            "tipo": self.tipo,
+            "quantidade ingressos disponiveis": self.qtd_ingressos_disponiveis,
+            "idade minima": self.idade_minima,
+            "status": self.status
         }
