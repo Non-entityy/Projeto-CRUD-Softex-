@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 def get_file_path(categoria):
     nome_arquivo = categoria.lower() + 's.json'
-    caminho = os.path.join(BASE_DIR, nome_arquivo)
+    caminho = os.path.join(BASE_DIR, "data", nome_arquivo)
     return caminho
 
 def load_data(categoria) -> list:
@@ -36,3 +36,5 @@ def save_data(categoria, dados):
     caminho = get_file_path(categoria)
     with open(caminho, 'w', encoding='utf-8') as f:
         json.dump(dados, f, indent=2, ensure_ascii=False)
+
+get_file_path("event")
