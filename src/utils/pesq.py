@@ -1,9 +1,9 @@
 #Danyelle
-from utils.load_save import carregar_eventos
+from utils.load_save import load_data
 def search_event(events=None):
     """Pesquisa eventos pelo nome (case insensitive)."""
     if events is None:
-        events = carregar_eventos()
+        events = load_data("event")
 
     termo = input("Digite o nome (ou id) do evento: ").strip().lower()
     encontrados = []

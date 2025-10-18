@@ -1,6 +1,6 @@
 from models.event import Evento
 from utils.additens import adicionar_evento
-from utils.load_save import carregar_eventos
+from utils.load_save import load_data
 from utils.edit import editar_item
 from utils.pesq import search_event
 from utils.remitens import remover_evento_nome
@@ -10,7 +10,7 @@ from utils.list import list_events
 
 def main():
     while True:
-        events = carregar_eventos()
+        events = load_data("event")
         opcao = menu()
 
         match opcao:

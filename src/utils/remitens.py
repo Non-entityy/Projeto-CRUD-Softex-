@@ -1,5 +1,5 @@
 #Gleiciane Farias
-from utils.load_save import salvar_eventos
+from utils.load_save import save_data
 
 # lista_planeta = [
 #     {"id": 1, 
@@ -44,7 +44,7 @@ def remover_evento_nome(lista_evento, evento_remover):
                print(f"O evento {evento_remover} foi removido com  sucesso.") 
                # reordenar_id(lista_evento) 
                print(f"{lista_evento}")
-               salvar_eventos(lista_evento)
+               save_data("event", lista_evento)
                return lista_evento
      else:
           print(f"O Planeta digitado {evento_remover} não foi encontrado. Verifique se digitou corretamente.")    

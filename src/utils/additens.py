@@ -1,4 +1,4 @@
-from utils.load_save import carregar_eventos, salvar_eventos
+from utils.load_save import load_data, save_data
 # #Lorena
 # # atributos = [] nome, data, local, descricao, tipo
 def adicionar_evento(Class_obj, eventos):
@@ -13,6 +13,6 @@ def adicionar_evento(Class_obj, eventos):
     novo_evento = Class_obj(tipo, nome, data, local, descricao)
     evento_dict = novo_evento.to_dict()
     eventos.append(evento_dict)
-    salvar_eventos(eventos)
+    save_data("event", eventos)
     print("Evento adicionado com sucesso!")
     return novo_evento

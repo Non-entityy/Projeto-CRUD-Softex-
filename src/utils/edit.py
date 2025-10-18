@@ -1,10 +1,10 @@
 #Rodrigo
-from utils.load_save import carregar_eventos, salvar_eventos
+from utils.load_save import load_data, save_data
 from utils.list import list_events
 from utils.functions import try_input_int
 from time import sleep
 
-events_json = carregar_eventos()
+events_json = load_data("event")
 
 def editar_item():
     """Função para editar um item
@@ -52,4 +52,4 @@ def editar_item():
 
     events.insert(indice_item - 1, evento_selecionado) # Salvando evento atualizado removendo a informação antiga e adicionando a nova
 
-    salvar_eventos(events) # Salvando a lista de eventos diretamente no arquivo JSON
+    save_data("event", events) # Salvando a lista de eventos diretamente no arquivo JSON
