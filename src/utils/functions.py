@@ -1,3 +1,5 @@
+import inspect
+
 def try_input_int(msg_input: str):
     """Faz um input verificando possíveis erros do úsuario como:
     - Escrever uma letra
@@ -21,3 +23,30 @@ def try_input_int(msg_input: str):
             else: break
     
     return var_int
+
+def criar_instancia(classe):
+    """Pega uma classe como parametro e cria uma instância a partir dessa classe
+
+    Args:
+        classe (class): Classe do objeto/instância que deseja criar
+
+    Returns:
+        classe: Retorna uma instância do tipo <classe>
+    """
+    # Obtém os parâmetros do construtor da classe (__init__)
+    parametros = inspect.signature(classe.__init__).parameters
+    
+    # Ignora o primeiro parâmetro 'self'
+    args_necessarios = [p for p in parametros if p != "self"]
+
+    print(f"A classe recebida foi: {classe.__name__}")
+    print("Atributos necessários:", args_necessarios)
+    
+    valores = {}
+    for arg in args_necessarios:
+        valor = input(f"Digite o valor para o atributo '{arg}': ")
+        valores[arg] = valor
+    
+    # Cria uma instância da classe usando os valores coletados
+    instancia = classe(**valores)
+    return instancia
