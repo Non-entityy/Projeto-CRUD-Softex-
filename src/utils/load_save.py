@@ -4,6 +4,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 def get_file_path(categoria: str):
+    if categoria.lower() == 'ingress':
+        nome_arquivo = categoria.lower() + '.json'
+        caminho = os.path.join(BASE_DIR, "data", nome_arquivo)
+        return caminho
     nome_arquivo = categoria.lower() + 's.json'
     caminho = os.path.join(BASE_DIR, "data", nome_arquivo)
     return caminho
