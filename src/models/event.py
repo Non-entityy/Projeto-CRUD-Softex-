@@ -14,7 +14,7 @@ class Evento:
         self.status = True # True para ativo | False para inativo
 
     def __repr__(self):
-        return f"Evento({self.id}, {self.tipo}, {self.nome}, {self.data}, {self.local})"
+        return f"Evento({self.id}, '{self.nome}', {self.data}, '{self.local}', '{self.descricao}', '{self.tipo}', {self.qtd_ingressos_disponiveis}, {self.idade_minima}, {self.status})"
 
     def to_dict(self):
         return {
