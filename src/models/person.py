@@ -43,7 +43,7 @@ class Pessoa:
             self, cpf: CPF, nome: str, 
             idade: int, genero: Genero, 
             ingressos_ativos=[], ingressos_vencidos=[]):
-        self.id = id(cpf, nome, idade, genero, ingressos_ativos, ingressos_vencidos)
+        self.id = id((cpf, nome, idade, genero, ingressos_ativos, ingressos_vencidos))
         self.cpf = CPF(cpf)
         self.nome = nome
         self.idade = idade
