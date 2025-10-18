@@ -24,7 +24,7 @@ def main():
                 list_events(False)
                 remover_evento_nome(events, search_event(events))
             case "5":
-                list_events(events)
+                list_events(time=0.5)
             case "0":
                 print("Saindo... Até logo!")
                 break
