@@ -1,5 +1,5 @@
 #Gleiciane Farias
-from utils.load_save import save_data
+from utils.load_save import save_data, load_data
 
 # lista_planeta = [
 #     {"id": 1, 
@@ -32,22 +32,37 @@ from utils.load_save import save_data
 #      "temperatura": ~-63},
 # ]
 
-def reordenar_id(lista_evento): # Função que não vai ser utilizada pelo conceito de Design Patterns
-     for id, evento in enumerate(lista_evento, start=1):
-          evento["id"] = id
-     return lista_evento
+# def reordenar_id(lista_evento): # Função que não vai ser utilizada pelo conceito de Design Patterns
+#      for id, evento in enumerate(lista_evento, start=1):
+#           evento["id"] = id
+#      return lista_evento
 
-def remover_evento_nome(lista_evento, evento_remover):
-     for evento in lista_evento:
-          if evento_remover["nome"] == evento["nome"]:
-               lista_evento.remove(evento)
-               print(f"O evento {evento_remover} foi removido com  sucesso.") 
-               # reordenar_id(lista_evento) 
-               print(f"{lista_evento}")
-               save_data("event", lista_evento)
-               return lista_evento
-     else:
-          print(f"O Planeta digitado {evento_remover} não foi encontrado. Verifique se digitou corretamente.")    
+def remover_evento_nome(lista_evento):
+     for i, dic in enumerate(lista_evento, start= 0):
+           for key, value in dic.items():
+                if key == "id":
+                     print(f'ID: {i}')
+                     continue
+                print(f'{key}: {value}')
+           print()
+     id_remove = int(input("Digite o ID do evento: "))
+     lista_evento.pop(id_remove)
+     save_data("event", lista_evento)
+     return lista_evento
+# remover_evento_nome(load_data("event"))
+
+     # for evento in lista_evento:
+     #      print(evento)
+     # remove_id = int(input("Digite o ID do evento: "))
+     # for evento in lista_evento:
+     #      if remove_id == evento[0]:
+     #           lista_evento.remove(evento)
+     #           print(f"O evento {evento[1]} foi removido com  sucesso.") 
+     #           # reordenar_id(lista_evento) 
+     #           print(f"{lista_evento}")
+
+     # else:
+     #      print(f"O evento digitado {evento_remover} não foi encontrado. Verifique se digitou corretamente.")    
       
 
 # Testes

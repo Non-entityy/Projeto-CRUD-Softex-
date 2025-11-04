@@ -7,10 +7,12 @@ def adicionar_evento(Class_obj, eventos):
     nome = input("Nome do Evento: ")
     data = input("Data do Evento (DD-MM-AAAA): ")
     local = input("Local do Evento: ")
+    ingressos = input("Quantidade de ingressos: ")
+    idade = input("Idade mínima: ")
     descricao = input("Descrição do Evento: ")
    
 
-    novo_evento = Class_obj(tipo, nome, data, local, descricao)
+    novo_evento = Class_obj(tipo, nome, data, local, ingressos, idade, descricao)
     evento_dict = novo_evento.to_dict()
     eventos.append(evento_dict)
     save_data("event", eventos)

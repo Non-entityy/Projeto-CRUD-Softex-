@@ -1,34 +1,26 @@
 [
-    {
-        "id": 1,
-        "nome": "Conferência de Tecnologia 2025",
-        "data": "2025-10-10",
-        "local": "Centro de Convenções ABC",
-        "descricao": "Uma conferência focada em inovações tecnológicas, com palestras de especialistas da indústria.",
-        "tipo": "Conferência"
-    },
-    {
-        "id": 2,
-        "nome": "Festa de Aniversário do João",
-        "data": "2025-09-20",
-        "local": "Casa do João - Rua dos Lírios, 123",
-        "descricao": "Uma festa de aniversário com amigos e familiares, com música e muita diversão.",
-        "tipo": "Festa"
-    },
-    {
-        "id": 138499892301392,
-        "nome": "isso",
-        "data": "teste",
-        "local": "25-09-2025",
-        "descricao": "aqui",
-        "tipo": "dwadawfasf"
-    },
-    {
-        "id": 126279459491328,
-        "tipo": "dawdwdaw",
-        "nome": "teste",
-        "data": "teste teste",
-        "local": "25-09-2025",
-        "descricao": "aqui"
-    }
+  {
+    "id": 1,
+    "nome": "Conferência de Tecnologia 2025",
+    "data": "2025-10-10",
+    "local": "Centro de Convenções ABC",
+    "descricao": "Uma conferência focada em inovações tecnológicas, com palestras de especialistas da indústria.",
+    "tipo": "Conferência"
+  },
+  {
+    "id": 2,
+    "nome": "Festa de Aniversário do João",
+    "data": "2025-09-20",
+    "local": "Casa do João - Rua dos Lírios, 123",
+    "descricao": "Uma festa de aniversário com amigos e familiares, com música e muita diversão.",
+    "tipo": "Festa"
+  },
+  {
+    "id": 138499892301392,
+    "nome": "isso",
+    "data": "teste",
+    "local": "25-09-2025",
+    "descricao": "aqui",
+    "tipo": "dwadawfasf"
+  }
 ]

@@ -21,10 +21,10 @@ def main():
             case "3":
                 editar_item(events)
             case "4":
-                list_events(False)
-                remover_evento_nome(events, search_event(events))
+                # list_events(False)
+                remover_evento_nome(events)
             case "5":
-                list_events(time=0.5)
+                list_events(False,time=0.5)
             case "0":
                 print("Saindo... Até logo!")
                 break

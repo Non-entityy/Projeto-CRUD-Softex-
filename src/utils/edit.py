@@ -7,7 +7,7 @@ from time import sleep
 
 events_json = load_data("event")
 
-def editar_item():
+def editar_item(events):
     """Função para editar um item
     # Funcionalidades:
     - Lista todos os itens
